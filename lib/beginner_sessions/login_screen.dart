@@ -95,9 +95,7 @@ class LoginScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  if(formKey.currentState!.validate()){
 
-                  }
                 },
                 child: Text('Go'),
               ),
@@ -107,4 +105,6 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+
 }
+
