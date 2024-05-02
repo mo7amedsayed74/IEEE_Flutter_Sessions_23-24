@@ -1,0 +1,13 @@
+API Documentation: https://rickandmortyapi.com/documentation/
+
+
+HTTP methods:
+         POST   GET   UPDATE(PUT,PATCH)  DELETE  >> [CRUD]
+
+
+response [status code , Body]
+                        body >> JSON
+
+
+
+

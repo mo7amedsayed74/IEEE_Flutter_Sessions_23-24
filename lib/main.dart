@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ieee_sessions/api_session/api_cubit/api_cubit.dart';
+import 'package:ieee_sessions/api_session/screens/api_screen.dart';
 import 'package:ieee_sessions/async_session/cache_helper.dart';
 import 'package:ieee_sessions/sqflite_session/cubit/cubit.dart';
-import 'package:ieee_sessions/sqflite_session/screens/todo_layout.dart';
 import 'package:ieee_sessions/state_management/counter_cubit/bloc_observer.dart';
 import 'package:ieee_sessions/state_management/counter_cubit/cubit.dart';
 
@@ -24,11 +25,24 @@ class MyApp extends StatelessWidget {
         BlocProvider( // lazy
           create: (context) => ToDoCubit()..createDB(), // cascade
         ),
+        BlocProvider(
+          create: (context) => CharactersCubit()..getAllCharacters(), // cascade
+        ),
       ],
-      child: MaterialApp(
+      child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: ToDoApp(),
+        home: APIScreen(),
       ),
     );
   }
 }
+
+
+/*
+URL >> base url , end point
+
+method
+
+query
+
+ */
