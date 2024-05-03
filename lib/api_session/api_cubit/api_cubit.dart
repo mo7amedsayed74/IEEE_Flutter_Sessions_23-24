@@ -25,10 +25,11 @@ class CharactersCubit extends Cubit<CharacterStates> {
       //print(response.data['results'][0]['name']);
 
       // response.data['results'] >> List<Map<String,dynamic>>
-      List<dynamic> results = response.data['results'];
+      //List<dynamic> results = response.data['results'];
 
       /// mapping results to List<CharacterModel>
-      characters = results.map((element) => CharacterModel.fromJson(element)).toList();
+      //characters = results.map((element) => CharacterModel.fromJson(element)).toList();
+      characters = response.data['results'].map<CharacterModel>((element) => CharacterModel.fromJson(element)).toList();
 
       /// test after mapping
       print(characters[4].name);
