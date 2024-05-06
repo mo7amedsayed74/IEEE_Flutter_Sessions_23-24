@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ieee_sessions/api_session/api_cubit/api_states.dart';
+import 'package:ieee_sessions/api_session/dio_helper.dart';
 
 class CharactersCubit extends Cubit<CharacterStates> {
   CharactersCubit() : super(InitialState());
